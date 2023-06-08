@@ -1,9 +1,9 @@
-from flask import (Blueprint, render_template)
-from ..shipping_form import ShippingForm
+from flask import Blueprint, render_template
+from ..models import Package
 
 bp = Blueprint("home", __name__, url_prefix="")
 
 @bp.route("/")
 def packages():
-    return render_template("base.html")
-
+    packages = Package.query.all()
+    return render_template('package_status.html', packages=packages)

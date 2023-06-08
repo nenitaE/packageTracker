@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%
+    }
+    td {
+        border: 1px solid black;
+        padding: 10px;
+    }
+</style>
+
+ <h2> VERY accurate, pretty much live Package Tracker</h2>
+
+<table>
+        <tr style = "font-weight: bold;">
+            <td> ID </td>
+            <td> Sender</td>
+            <td> Recipient </td>
+            <td> Origin </td>
+            <td>Destination </td>
+            <td>Location</td>
+        </tr>
+
+    {% for package in packages %}
+    <tr>
+        <td>{{ package.id }}</td>
+        <td>{{ package.sender }} </td>
+        <td> {{ package.recipient }} </td>
+        <td> {{ package.origin }} </td>
+        <td>{{ package.destination }} </td>
+        <td>{{ package.location }} </td>
+    </tr>
+    {% endfor %}
+
+</table>
+{% endblock %}

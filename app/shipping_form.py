@@ -4,8 +4,8 @@ from wtforms.validators import DataRequired
 from map.map import map
 
 class ShippingForm(FlaskForm):
-    origin = SelectField("Origin", validators=[DataRequired()], choices = [(k, k) for k in map.keys()])
-    destination = SelectField("Destination", validators=[DataRequired()], choices = [(k, k) for k in map.keys()])
+    origin = SelectField("Origin:", validators=[DataRequired()], choices = [(k, k) for k in map.keys()])
+    destination = SelectField("Destination:", validators=[DataRequired()], choices = [(k, k) for k in map.keys()])
     sender_name = StringField("From:", validators=[DataRequired()])
     recipient_name = StringField("To:", validators=[DataRequired()])
     express_bool = BooleanField("Express?")
