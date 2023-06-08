@@ -1,12 +1,21 @@
-<html>
+<html >
 
-<head>
+<head >
     <title>PackageTracker</title>
-    <h1>Package Tracker</h1>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                flex-direction: column;
+            }
+        </style>
 </head>
 
-<body>
-    {% block content %}{% endblock %}
+<body style="display:flex; justify-content:center; align-items:center; min-height:100vh">
+    <h1>Package Tracker</h1>
+    <div>{% block content %}{% endblock %}</div>
 </body>
 
 </html>

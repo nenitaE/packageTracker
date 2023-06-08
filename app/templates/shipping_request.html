@@ -4,12 +4,12 @@
 <form method="post" action="{{ url_for('.new_package') }}">
     {{ form.csrf_token }}
     <div>
-        {{ form.sender_name.label }} {{ form.sender_name }}
-        {{ form.recipient_name.label }} {{ form.recipient_name }}
-        {{ form.origin.label }} {{ form.origin }}
-        {{ form.destination.label }} {{ form.destination }}
-        {{ form.express_bool.label }} {{ form.express_bool }}
-        {{form.submit}}
-        {{form.cancel}}
+        <p>{{ form.sender_name.label }} {{ form.sender_name }}</p>
+        <p>{{ form.recipient_name.label }} {{ form.recipient_name }}</p>
+        <p>{{ form.origin.label }} {{ form.origin }}</p>
+        <p>{{ form.destination.label }} {{ form.destination }}</p>
+        <p>{{ form.express_bool.label }} {{ form.express_bool }}</p>
+        <p>{{form.submit}}</p>
+        <p>{{form.cancel}}</p>
     </div>
 {% endblock %}
