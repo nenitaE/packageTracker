@@ -22,7 +22,8 @@ def new_package():
                     location=data["origin"])
         db.session.add(new_package)
         db.session.commit()
-        # return render_template("base.html")
-        return redirect(url_for("home.packages"))
 
+        # DEBUG: Advance Time
+        Package.advance_all_locations()
+        return redirect(url_for("home.packages"))
     return render_template("shipping_request.html", form=form)
